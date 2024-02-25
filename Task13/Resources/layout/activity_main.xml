@@ -51,6 +51,6 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:text="exit"
-            android:id="exitBtn"/>
+            android:id="@+id/exitBtn"/>
     </LinearLayout>
 </LinearLayout>
