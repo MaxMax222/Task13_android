@@ -21,7 +21,6 @@
         <EditText
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="____"
             android:gravity="center"
             android:inputType="number"
             android:id="@+id/chooseNum"/>

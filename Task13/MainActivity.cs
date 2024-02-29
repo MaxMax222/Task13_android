@@ -10,7 +10,7 @@ namespace Task13
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        Button changesBtn, nextBtn, exitBtn;
+        Button changesBtn, nextBtn, exitBtn, imgBtn;
         TextView txt;
         EditText editTxt;
         LinearLayout center;
@@ -26,6 +26,12 @@ namespace Task13
             changesBtn.Click += ChangesBtn_Click;
             nextBtn.Click += NextBtn_Click;
             exitBtn.Click += ExitBtn_Click;
+            imgBtn.Click += ImgBtn_Click;
+        }
+
+        private void ImgBtn_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Cards));
         }
 
         private void ExitBtn_Click(object sender, System.EventArgs e)
@@ -89,6 +95,7 @@ namespace Task13
             changesBtn = FindViewById<Button>(Resource.Id.changesBtn);
             nextBtn = FindViewById<Button>(Resource.Id.nextBtn);
             exitBtn = FindViewById<Button>(Resource.Id.exitBtn);
+            imgBtn = FindViewById<Button>(Resource.Id.imagesScreen);
             txt = FindViewById<TextView>(Resource.Id.txt);
             editTxt = FindViewById<EditText>(Resource.Id.editTxt);
             center = FindViewById<LinearLayout>(Resource.Id.centerLayout);
