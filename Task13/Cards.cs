@@ -37,13 +37,22 @@ namespace Task13
         {
             main.RemoveAllViews();
             main.SetBackgroundColor(new Color(255, 255, 255));
+            editTxt.Text = "";
         }
 
         private void ShowBtn_Click(object sender, EventArgs e)
         {
             main.RemoveAllViews();
             main.SetBackgroundColor(new Color(255, 255, 255));
-            int imgToShow = int.Parse(editTxt.Text);
+            int imgToShow;
+            if (editTxt.Text == "")
+            {
+                imgToShow = 0;
+            }
+            else
+            {
+                imgToShow = int.Parse(editTxt.Text);
+            }
             char[] types = { 's', 'c', 'h', 'd' };
             LinearLayout layout = new LinearLayout(this);
             for (int i = 0; i <= imgToShow; i++)

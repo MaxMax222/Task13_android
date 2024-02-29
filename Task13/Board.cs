@@ -33,18 +33,27 @@ namespace Task13
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             centerLayout.RemoveAllViews();
+            editTxt.Text = "";
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            int btnsToAdd = int.Parse(editTxt.Text);
+            int btnsToAdd;
+            if (editTxt.Text == "")
+            {
+                btnsToAdd = 0;
+            }
+            else
+            {
+                btnsToAdd = int.Parse(editTxt.Text);
+            }
             for (int i = 0; i < btnsToAdd; i++)
             {
                 var btn = new Button(this)
                 {
                     LayoutParameters = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent)
                     { Weight = 1 },
-                    Id = i
+                    Id = i + 1
                 };
                 btn.Click += Btn_Click;
                 centerLayout.AddView(btn);
