@@ -64,6 +64,7 @@ namespace Task13
                         var img = new ImageView(this);
                         img.SetImageResource(Resources.GetIdentifier($"img{rnd.Next(1, 14)}{types[rnd.Next(4)]}", "drawable", this.PackageName));
                         img.LayoutParameters = new LinearLayout.LayoutParams(0, 200, 1);
+                        img.Click += Imgv_Click;
                         layout.AddView(img);
                     }
                     main.AddView(layout);
